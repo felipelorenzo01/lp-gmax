@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GMAX — Fitas e Abrasivos | Presente no que fixa, repara e faz acontecer</title>
+<meta name="description" content="GMAX Fitas e Abrasivos: fitas adesivas, fitas de empacotamento personalizadas com sua marca e abrasivos para preparo e acabamento." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yellow: #F5B90E;
+    --yellow-form: #E6AC00;
+    --black: #1A1A1A;
+    --white: #FFFFFF;
+    --text-dark: #1a1a1a;
+    --text-body: #333;
+    --font: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    color: var(--text-dark);
+    background: #fff;
+    line-height: 1.4;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: transparent; }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 60px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: filter .25s ease, box-shadow .25s ease;
+    border: 0;
+    cursor: pointer;
+  }
+  .btn:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    filter: brightness(1.05);
+  }
+  .btn-dark { background: var(--black); color: #fff; }
+  .btn-yellow { background: var(--yellow); color: var(--black); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    background-image: url('images/Fundo_Topo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 720px;
+    overflow: visible;
+  }
+  .hero-inner {
+    position: relative;
+    padding: 60px 0 80px;
+    min-height: 720px;
+  }
+  .logo {
+    width: 230px;
+    height: auto;
+    margin-bottom: 100px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 2.6vw, 36px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--black);
+    letter-spacing: -0.01em;
+    max-width: 380px;
+  }
+  .launch-badge {
+    position: absolute;
+    top: 60px;
+    right: 14%;
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
+  }
+  .hero-cta-wrap {
+    position: absolute;
+    bottom: 80px;
+    left: 60%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  /* VIDEO */
+  .video-section {
+    position: relative;
+    background: var(--yellow);
+    padding: 0;
+    overflow: hidden;
+  }
+  .video-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+  }
+  .video-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 4% 5%;
+    gap: 5%;
+  }
+  .video-player {
+    position: relative;
+    width: min(60%, 760px);
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #2a2a2a;
+    cursor: pointer;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  }
+  .video-placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #d4d4d4 0%, #a8a8a8 50%, #6b5630 100%);
+  }
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 78px;
+    background: var(--black);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s ease;
+  }
+  .video-player:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); }
+  .play-btn::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 22px solid #fff;
+    margin-left: 6px;
+  }
+
+  /* QUALITY */
+  .quality {
+    position: relative;
+    background-image: url('images/Fundo_Fitas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0 110px;
+    min-height: 560px;
+  }
+  .quality-content { max-width: 380px; }
+  .quality-heading {
+    font-size: clamp(22px, 2vw, 27px);
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--black);
+    margin-bottom: 28px;
+  }
+  .quality-text {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--black);
+  }
+  .quality-text strong { font-weight: 800; }
+  .quality-cta-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+    padding-right: 18%;
+  }
+
+  /* CUSTOMIZE */
+  .customize {
+    position: relative;
+    background-image: url('images/Fundo_FitaPersonaslizada.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 90px 0;
+    min-height: 320px;
+    color: #fff;
+  }
+  .customize-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .customize-title {
+    font-size: clamp(24px, 2.3vw, 32px);
+    font-weight: 800;
+    line-height: 1.25;
+    max-width: 420px;
+  }
+  .customize-cta { display: flex; justify-content: center; }
+
+  /* FORM SECTION */
+  .form-section {
+    position: relative;
+    background: var(--yellow);
+    padding: 100px 0 110px;
+    overflow: hidden;
+  }
+  /* Grid agora com gap maior e o mascote ABSOLUTAMENTE posicionado
+     entre as colunas, encostado no formulário */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+  }
+  .form-text-col {
+    position: relative;
+    z-index: 1;
+  }
+  .form-copy {
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--black);
+    margin-bottom: 50px;
+    max-width: 460px;
+  }
+  .form-subcopy {
+    font-size: clamp(15px, 1.4vw, 18px);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.4;
+    max-width: 320px;
+  }
+  /* MASCOTE — posicionado encostado no formulário (lado esquerdo do form) */
+  .mascot-form {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-95%);
+    width: 280px;
+    height: auto;
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  .form-card {
+    background: var(--yellow-form);
+    border-radius: 28px;
+    padding: 36px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 3;
+  }
+  .form-field {
+    position: relative;
+    background: #fff;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: transparent;
+    padding: 0 22px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-dark);
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-field::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid #888;
+    border-bottom: 2px solid #888;
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+  }
+  .form-field input::placeholder { color: #888; }
+  .form-field select { color: #888; }
+  .form-field select option { color: var(--text-dark); }
+  .form-radio-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 8px 14px 4px;
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 600;
+  }
+  .form-radio-row label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .form-radio-row input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+  }
+  .form-radio-row input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px; left: 2px;
+    width: 8px; height: 8px;
+    background: var(--black);
+    border-radius: 50%;
+  }
+  .form-card .btn { width: 100%; margin-top: 14px; }
+
+  /* FOOTER CTA */
+  .footer-cta { background: #fff; padding: 80px 0 30px; }
+  .footer-cta-title {
+    font-size: clamp(20px, 1.9vw, 26px);
+    font-weight: 800;
+    line-height: 1.35;
+    color: var(--black);
+    margin-bottom: 32px;
+    max-width: 720px;
+  }
+
+  /* FOOTER */
+  footer { background: #fff; padding: 50px 0 40px; }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: end;
+  }
+  .footer-info {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.75;
+  }
+  .footer-tagline {
+    font-size: 13px;
+    color: var(--text-body);
+    margin-top: 36px;
+  }
+  .social { display: flex; gap: 16px; align-items: center; }
+  .social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    transition: transform .2s ease;
+  }
+  .social a:hover { transform: translateY(-3px); }
+  .social svg { width: 30px; height: 30px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 1100px) {
+    .container { padding: 0 28px; }
+    .hero { background-size: cover; min-height: 620px; }
+    .hero-inner { min-height: 620px; padding: 40px 0 60px; }
+    .logo { width: 190px; margin-bottom: 60px; }
+    .launch-badge { width: 84px; height: 84px; right: 6%; top: 40px; }
+    .hero-cta-wrap { left: 50%; bottom: 50px; }
+    .quality { background-size: cover; padding: 80px 0 90px; }
+    .quality-cta-row { padding-right: 10%; }
+    .form-grid { gap: 30px; }
+    .mascot-form { width: 230px; }
+  }
+  @media (max-width: 820px) {
+    .hero-inner { padding-top: 30px; }
+    .logo { margin-bottom: 30px; }
+    .hero-title { font-size: 24px; max-width: 100%; }
+    .launch-badge { width: 72px; height: 72px; top: 26px; right: 5%; }
+    .hero-cta-wrap { bottom: 30px; left: 50%; }
+    .video-content { padding: 4% 4%; gap: 4%; }
+    .video-player { width: 80%; }
+    .quality-content { max-width: 100%; }
+    .quality-cta-row { justify-content: center; padding-right: 0; margin-top: 40px; }
+    .customize-grid { grid-template-columns: 1fr; gap: 30px; text-align: left; }
+    .customize-cta { justify-content: flex-start; }
+    .customize { padding: 60px 0 80px; }
+    .customize-title { max-width: 60%; }
+    .form-grid { grid-template-columns: 1fr; gap: 50px; }
+    .mascot-form {
+      position: static;
+      transform: none;
+      margin: 30px auto 0;
+      width: 200px;
+    }
+    .form-card { padding: 28px 24px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    .social { justify-content: flex-start; }
+  }
+  @media (max-width: 520px) {
+    .container { padding: 0 22px; }
+    .btn { width: 240px; height: 54px; font-size: 12.5px; }
+    .hero-title { font-size: 22px; }
+    .quality-heading, .customize-title, .form-copy, .footer-cta-title { font-size: 20px; }
+    .form-card { padding: 24px 20px; }
+    .form-field input, .form-field select { height: 46px; font-size: 13px; }
+    .launch-badge { width: 60px; height: 60px; }
+    .video-content { padding: 4% 6%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <a href="#" aria-label="GMAX - Fitas e Abrasivos">
+        <img class="logo" src="images/Logotipo.png" alt="GMAX - Fitas e Abrasivos">
+      </a>
+      <h1 class="hero-title">
+        Presente no que<br>
+        fixa, repara e<br>
+        faz acontecer.
+      </h1>
+      <img class="launch-badge" src="images/Selo.png" alt="Lançamento">
+      <div class="hero-cta-wrap">
+        <a href="#cotacao" class="btn btn-dark">Faça seu pedido</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <img class="video-bg" src="images/Fundo_Vi_deo.png" alt="" aria-hidden="true">
+  <div class="video-content">
+    <div class="video-player" role="button" tabindex="0" aria-label="Reproduzir vídeo institucional GMAX">
+      <div class="video-placeholder"></div>
+      <div class="play-btn" aria-hidden="true"></div>
+    </div>
+    <a href="#cotacao" class="btn btn-dark">Solicitar cotação</a>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="quality">
+  <div class="container">
+    <div class="quality-content">
+      <h2 class="quality-heading">
+        Qualidade e eficiência<br>
+        para as tarefas mais simples<br>
+        ou operações mais exigentes.
+      </h2>
+      <p class="quality-text">
+        A <strong>GMAX</strong> atende diferentes necessidades com desempenho e excelente custo-benefício. Fitas adesivas e Abrasivos para o uso em casa, nas empresas, oficinas e indústrias, mantendo os processos funcionando com mais produtividade e confiança.
+      </p>
+    </div>
+    <div class="quality-cta-row">
+      <a href="#cotacao" class="btn btn-dark">Faça seu pedido</a>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMIZE -->
+<section class="customize">
+  <div class="container">
+    <div class="customize-grid">
+      <h2 class="customize-title">
+        Personalize sua<br>
+        fita de empacotamento<br>
+        conosco.
+      </h2>
+      <div class="customize-cta">
+        <a href="#cotacao" class="btn btn-yellow">Pedir cotação</a>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="cotacao">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-text-col">
+        <div class="form-copy">
+          Fitas adesivas para<br>
+          diferentes aplicações.<br>
+          Fitas de empacotamento<br>
+          com a sua marca.<br>
+          Abrasivos para preparo<br>
+          e acabamento.
+        </div>
+        <div class="form-subcopy">
+          Preencha o formulário e<br>
+          receba o orçamento.
+        </div>
+      </div>
+      <!-- Mascote agora é filho do form-grid (não mais do form-text-col)
+           para poder se posicionar livremente entre as colunas -->
+      <img class="mascot-form" src="images/mascote.png" alt="Mascote GMAX">
+
+      <form class="form-card" onsubmit="event.preventDefault(); handleSubmit();">
+        <div class="form-field">
+          <input type="text" name="nome" placeholder="Nome" required>
+        </div>
+        <div class="form-field">
+          <input type="tel" name="celular" placeholder="Celular" required>
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" placeholder="E-mail Corporativo" required>
+        </div>
+        <div class="form-field">
+          <input type="text" name="empresa" placeholder="Empresa" required>
+        </div>
+        <div class="form-field">
+          <select name="colaboradores" required>
+            <option value="" disabled selected hidden>Número de Colaboradores</option>
+            <option>1 a 10</option>
+            <option>11 a 50</option>
+            <option>51 a 200</option>
+            <option>Mais de 200</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <select name="ramo" required>
+            <option value="" disabled selected hidden>Ramo de atuação</option>
+            <option>Indústria</option>
+            <option>Comércio</option>
+            <option>Oficina</option>
+            <option>Construção Civil</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="form-radio-row">
+          <span style="font-weight:600;">Sua compra será:</span>
+          <label><input type="radio" name="tipo" value="atacado" checked> Atacado</label>
+          <label><input type="radio" name="tipo" value="varejo"> Varejo</label>
+        </div>
+        <button type="submit" class="btn btn-dark">Solicitar orçamento</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="container">
+    <h2 class="footer-cta-title">
+      Encontre a solução ideal para a sua necessidade.<br>
+      Clique abaixo e compre pelo melhor preço.
+    </h2>
+    <a href="#cotacao" class="btn btn-yellow">Faça seu pedido</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info">
+        CNPJ 00.000.000/0001-00<br>
+        Rua Conselheiro Pena, 50 - Santa Branca<br>
+        Belo Horizonte/MG
+      </div>
+      <div class="social">
+        <a href="#" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/gmax_fitas" target="_blank" rel="noopener" aria-label="Instagram GMAX">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer-tagline">GMAX Fitas e Abrasivos - Presente no que fixa, prepara e faz acontecer.</p>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit() {
+    const btn = document.querySelector('.form-card button');
+    btn.textContent = 'Enviado! ✓';
+    btn.style.background = '#2b8a3e';
+    setTimeout(() => {
+      btn.textContent = 'Solicitar orçamento';
+      btn.style.background = '';
+      document.querySelectorAll('.form-card input[type="text"], .form-card input[type="tel"], .form-card input[type="email"]').forEach(i => i.value = '');
+      document.querySelectorAll('.form-card select').forEach(s => s.selectedIndex = 0);
+    }, 2500);
+  }
+  document.querySelector('.video-player')?.addEventListener('click', () => {
+    alert('📹 Aqui será carregado o vídeo institucional da GMAX.');
+  });
+</script>
+
+</body>
+</html>
